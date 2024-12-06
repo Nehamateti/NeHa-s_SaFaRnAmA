@@ -1,0 +1,576 @@
+/* Reset margin and padding for a clean layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen background image for body */
+body.main-page, body.contact-page {
+    font-family: Arial, sans-serif;
+    background: url('images/safarnama-bg.png') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Title section with background overlay */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Main content for sections (Destinations, Activities, etc.) */
+main {
+    margin-top: 120px; /* Space for the fixed header */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 5;
+}
+
+/* Links section: Center the links and make them white */
+.links-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center links horizontally */
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.links-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the list items */
+}
+
+.links-section li {
+    margin: 20px 0;
+}
+
+.links-section a {
+    font-size: 1.5rem;
+    color: white; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links-section a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Contact Form Section (Contact Page) */
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    background-color: #eee1bd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0a0a08;
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Common Styles (for Main Page, Contact, and Destinations) */
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: white; /* Default white color for links */
+}
+
+a:hover {
+    color: #060606;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Specific Styles for Destinations Page */
+body.destinations-page {
+    padding-top: 50px;
+    background-image: url('images/destinations-bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header Row for Destinations Recommended and Filter Section */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destinations-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background-color:  rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.filter-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 20px;
+}
+
+.filter-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.filter-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-section select, .filter-section button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(12, 12, 12, 0.8); /* Button background (slightly transparent yellow) */
+    color: white;
+}
+
+.filter-section button:hover {
+    background-color: rgb(5, 5, 5); /* Solid yellow on hover */
+}
+
+/* Destinations Table */
+.destinations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 250px;
+}
+
+.destinations-table th, .destinations-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.destinations-table th {
+    background-color: rgba(11, 11, 11, 0.8); /* Slightly transparent yellow */
+    color: white;
+}
+
+.destinations-table tr:nth-child(even) {
+    background-color: rgba(249, 249, 249, 0.7); /* Light background for even rows */
+}
+
+.destinations-table tr:hover {
+    background-color: rgba(241, 241, 241, 0.9); /* Hover effect */
+}
+
+/* Table Content Styling */
+.destinations-table td {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for table cells */
+}
+
+/* Discover Activities Title */
+.activities-page h1 {
+    font-size: 2rem;      /* Smaller font size for title */
+    margin: 10px 0 0 0;   /* Add space only below the title */
+    text-align: center;   /* Keep text centered */
+    color: white;         /* White text for visibility */
+    position: absolute;   /* Position it at the top */
+    top: 5px;            /* Push the title slightly down from the top edge */
+    width: 100%;          /* Ensure it spans the full width of the page */
+}
+
+body.activities-page {
+    background-image: url('images/activities-bg.png'); /* Replace with actual path */
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.activities-header {
+    text-align: center;
+    padding: 40px 10px;
+} 
+
+.activities-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.activities-header p {
+    font-size: 1.2rem;
+}
+
+/* Featured Activities Section */
+.featured-activities {
+    padding: 0.5px;
+    margin-top: 150px;
+}
+
+.featured-activities h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.activity-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.activity-card .btn {
+    background-color: rgba(255, 185, 0, 0.8);
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.activity-card .btn:hover {
+    transition: background-color 0.3s;
+}
+
+/* Food & Cuisine Page Specific Styles */
+body.food-page {
+    background: url('images/food&cuisine-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.food-header {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.food-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.food-header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.categories {
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.category-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.category-cards a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background: rgba(255, 69, 0, 0.8);
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.category-cards a:hover {
+    background: #e03c00;
+    transform: scale(1.05);
+}
+
+.dishes {
+    width: 90%;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.dishes h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.dishes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.dishes table thead th {
+    background: #ff4500;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.dishes table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dishes table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dishes table tbody tr:hover {
+    background: rgba(255, 69, 0, 0.3);
+}
+
+/*specific styles for stay page*/
+body.stay-page {
+    background: url('images/stay-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.stay-header {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.stay-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.stay-header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.filters h2 {
+    margin: 100px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.filters label{
+    margin-left: 0;
+    color: #fff;
+    font-size: 2rem;
+    font-family: inherit;
+}
+
+.filters select {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0;
+}
+
+.filters button {
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.filters button:hover {
+    background: #e03c00;
+}
+
+.stay {
+    margin: 0 0;
+    text-align: center;
+}
+
+.stay h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.stay-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: o;
+}
+
+.stay-cards a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background: rgba(255, 69, 0, 0.8);
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.stay-cards a:hover {
+    background: #e03c00;
+    transform: scale(1.05);
+}

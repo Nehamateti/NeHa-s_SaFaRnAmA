@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Safarnama</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body class="destinations-page">
+    <!-- Main content section -->
+    <div class="container">
+        <!-- Left-aligned Text: Destinations Recommended -->
+        <h1 class="destinations-header">Destinations Recommended</h1>
+
+        <!-- Filter Section (Top-right) -->
+        <div class="filter-section">
+            <h3>Filter Destinations</h3>
+            <form id="filter-form">
+                <label for="type">Select Type:</label>
+                <select id="type" name="type">
+                    <option value="all">All Types</option>
+                    <option value="family">Family</option>
+                    <option value="solo">Solo</option>
+                    <option value="romantic">Romantic</option>
+                    <option value="friends">Friends</option>
+                    <option value="adventure">Adventure</option>
+                    <!-- Add more filter types as needed -->
+                </select>
+                <button type="submit">Filter</button>
+            </form>
+        </div>
+
+        <!-- Destinations Table -->
+        <table class="destinations-table">
+            <thead>
+                <tr>
+                    <th>Destination Name</th>
+                    <th>Suggested Type</th>
+                    <th>Description</th>
+                    <th>Budget</th>
+                    <th>Activity Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- This part will be dynamically populated -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Link to external JS (for functionality like filtering) -->
+    <script src="script.js"></script>
+</body>
+</html>

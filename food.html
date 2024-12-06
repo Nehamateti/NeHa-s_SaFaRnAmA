@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Cuisine - Safarnama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="food-page">
+    <!-- Header Section -->
+    <header class="food-header">
+        <h1>Discover Food & Cuisine</h1>
+        <p>Explore the rich flavors of India through its diverse culinary heritage.</p>
+    </header>
+
+    <!-- Filters Section -->
+    <div class="filters">
+        <h2>Filter Cuisines</h2>
+        <label for="cuisine-type">Select Type:</label>
+        <select id="cuisine-type">
+            <option value="all">All</option>
+            <option value="veg">Vegetarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+            <option value="streetfood">Street Food</option>
+            <option value="desserts">Desserts</option>
+            <option value="regional">Regional</option>
+        </select>
+        <button type="button" onclick="filterCuisines()">Apply Filter</button>
+    </div>
+    <!-- Recommended Dishes Section -->
+    <section class="dishes">
+        <h2>Recommended Dishes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Type</th>
+                    <th>Region</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+</body>
+</html>
